@@ -2129,6 +2129,7 @@ HEADERS_LIST="
     sys_resource_h
     sys_select_h
     sys_soundcard_h
+    sys_audioio_h
     sys_time_h
     sys_un_h
     sys_videoio_h
@@ -3375,6 +3376,8 @@ opengl_outdev_deps="opengl"
 opengl_outdev_suggest="sdl2"
 oss_indev_deps_any="sys_soundcard_h"
 oss_outdev_deps_any="sys_soundcard_h"
+sunau_indev_deps_any="sys_audioio_h"
+sunau_outdev_deps_any="sys_audioio_h"
 pulse_indev_deps="libpulse"
 pulse_outdev_deps="libpulse"
 sdl2_outdev_deps="sdl2"
@@ -6082,6 +6085,7 @@ check_headers libcrystalhd/libcrystalhd_if.h
 check_headers malloc.h
 check_headers net/udplite.h
 check_headers poll.h
+check_headers sys/audioio.h
 check_headers sys/param.h
 check_headers sys/resource.h
 check_headers sys/select.h
