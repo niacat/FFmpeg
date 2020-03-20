@@ -74,7 +74,7 @@ int ff_sunau_audio_open(AVFormatContext *s1, int is_output,
     }
 
     s->fd = audio_fd;
-#ifdef HAVE_BIGENDIAN
+#if HAVE_BIGENDIAN
     s->codec_id = AV_CODEC_ID_PCM_S16BE;
 #else
     s->codec_id = AV_CODEC_ID_PCM_S16LE;
